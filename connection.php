@@ -1,10 +1,10 @@
 <?php
 
-$con = mysqli_connect("localhost", "root", "", "userdemo");
+$con = mysqli_connect("localhost:3307", "root", "", "userdemo");
 
 // Check connection
-// if (!$con) {
-//     echo "Failed to connect to MySQL: " . mysqli_connect_error();
-// } else
-//     echo "Connection Success";
+ if (!$con) {
+     http_response_code(400);
+ } else
+     http_response_code(200);
 ?>
